@@ -1,0 +1,2 @@
+PKG_CPPFLAGS= -Ilzma
+PKG_LIBS = -L. -llzma
