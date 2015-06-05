@@ -1,3 +1,6 @@
+#ifndef TICK_H
+#define TICK_H 
+
 struct Tick{
     unsigned ActionDay;
     unsigned TradingDay;
@@ -53,3 +56,5 @@ struct Bar{
     unsigned long long Volume;
     double Turnover;
 };
+
+#endif

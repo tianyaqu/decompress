@@ -5,7 +5,8 @@
 
 using namespace std;
 
-#define MAX_LINE 50000
+//max line per file
+#define MAX_LINE 100000
 
 int parse_tick(string market, string line, struct Tick* p)
 {
@@ -223,13 +224,17 @@ unsigned int append_csv2_buffer(string market, string csv, struct Tick* ptr, uns
 int parse_string(const char* c_market,const char* content, struct Tick** result, unsigned* len)
 {
     string market(c_market);
-    string tts((const char*)content);
+    string file_content((const char*)content);
 
     *result = (struct Tick*)malloc(sizeof(struct Tick) * MAX_LINE);
+    if(*result == NULL)
+    {
+        *len = 0;
+        return -1;
+    }
 
     int ava_num = MAX_LINE;
-
-    *len = append_csv2_buffer(market, tts, *result,ava_num);
+    *len = append_csv2_buffer(market, file_content, *result,ava_num);
     return 0;
 }
 
