@@ -5,11 +5,8 @@
 #include <cstdlib>
 #include <cstdio>
 
+// believe the file is no bigger than 32M
 #define FILE_BUF_SIZE 32*1024*1024
-
-//extern void m_FreeMem(void* ptr);
-//extern int parse_string(const char* market, const char* content, struct Tick** result, unsigned* len);
-
 
 int decompress(const char* market,unsigned char *compressed, struct Tick** buffer, unsigned int* out_len)
 {

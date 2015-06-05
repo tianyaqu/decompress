@@ -19,7 +19,6 @@ DataFrame R_decompress(std::string market, RawVector data)
     //unsigned char* _data = (unsigned char*)compressed;
     
     int ret = decompress(market.c_str(), _data, &result,&len);
-    free(compressed);
     if (ret == 0 && len > 0)
     {
         CharacterVector id(len);
@@ -67,8 +66,7 @@ DataFrame R_decompress(std::string market, RawVector data)
         NumericVector presettle(len);
         NumericVector settle(len);
         
-        unsigned int i = 0;
-        for(;i < len;i++)
+        for(unsigned int i = 0;i < len;i++)
         {
           day[i] = result[i].ActionDay;      
           updatetime[i] = result[i].UpdateTime;
@@ -121,7 +119,7 @@ DataFrame R_decompress(std::string market, RawVector data)
         free_mem(result);
     
         return ListBuilder()
-          .add("day", day).add("updatetime", updatetime).add("millsec",mill).add("id",id)
+          .add("day", day).add("updatetime", updatetime).add("millsec",mill).add("instrument",id)
           .add("open",open).add("close",close).add("high",high).add("low",low).add("volume",volume).add("turnover",turnover)
           .add("last",last).add("average",ave).add("preclose",preclose).add("askprice1",askp1).add("askprice2",askp2)
           .add("askprice3",askp3).add("askprice4",askp4).add("askprice5",askp5).add("askvolume1",askv1).add("askvolume2",askv2)
