@@ -120,13 +120,13 @@ DataFrame R_decompress(std::string market, RawVector data)
     
         return ListBuilder()
           .add("day", day).add("updatetime", updatetime).add("millsec",mill).add("instrument",id)
-          .add("open",open).add("close",close).add("high",high).add("low",low).add("volume",volume).add("turnover",turnover)
-          .add("last",last).add("average",ave).add("preclose",preclose).add("askprice1",askp1).add("askprice2",askp2)
-          .add("askprice3",askp3).add("askprice4",askp4).add("askprice5",askp5).add("askvolume1",askv1).add("askvolume2",askv2)
-          .add("askvolume3",askv3).add("askvolume4",askv4).add("askvolume5",askv5).add("bidprice1",bidp1).add("bidprice2",bidp2)
-          .add("bidprice3",bidp3).add("bidprice4",bidp4).add("bidprice5",bidp5).add("bidvolume1",bidv1).add("bidvolume2",bidv2)
-          .add("bidvolume3",bidv3).add("bidvolume4",bidv4).add("bidvolume5",bidv5).add("upper",upper).add("lower",lower)
-          .add("openinterest",openinterest).add("preopeninterest",preopeninterest).add("presettle",presettle).add("settle",settle);        
+          .add("Open",open).add("Close",close).add("High",high).add("Low",low).add("Volume",volume).add("Turnover",turnover)
+          .add("Last",last).add("Average",ave).add("Preclose",preclose).add("Askprice1",askp1).add("Askprice2",askp2)
+          .add("Askprice3",askp3).add("Askprice4",askp4).add("Askprice5",askp5).add("Askvolume1",askv1).add("Askvolume2",askv2)
+          .add("Askvolume3",askv3).add("Askvolume4",askv4).add("Askvolume5",askv5).add("Bidprice1",bidp1).add("Bidprice2",bidp2)
+          .add("Bidprice3",bidp3).add("Bidprice4",bidp4).add("Bidprice5",bidp5).add("Bidvolume1",bidv1).add("Bidvolume2",bidv2)
+          .add("Bidvolume3",bidv3).add("Bidvolume4",bidv4).add("Bidvolume5",bidv5).add("Upper",upper).add("Lower",lower)
+          .add("Openinterest",openinterest).add("Preopeninterest",preopeninterest).add("Presettle",presettle).add("Settle",settle);        
         
     }
 }
