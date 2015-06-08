@@ -22,4 +22,6 @@ We use lzma for our compress/decompress algorithm,but with some variations.This 
 This format is compatible with most compress/decomprss tools(such as haoZip,winRar),so it's ok to save the data to a file and open it with haoZip to have a quick look.
 
   desc 5B len 8B         data
+  
   |-----|--------|---xxxxxxxxxxxxx---|
+  
